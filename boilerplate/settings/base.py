@@ -36,9 +36,9 @@ INSTALLED_APPS = [
     'django_js_reverse',
     'webpack_loader',
     'import_export',
-
     'common',
     'users',
+    'service',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +119,5 @@ WEBPACK_LOADER = {
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+DEFAULT_CHARSET = 'utf-8'
