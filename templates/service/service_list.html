@@ -4,7 +4,7 @@
 {% block body %}
 
 {% for service in object_list %}
-    <li>{{ service.title }} - {{ service.slug }}</li>
+    <li>{{ service.title }} - {{ service.slug }} - {{ service.get_absolute_url }}</li>
 {% empty %}
     <li>No articles yet.</li>
 {% endfor %}
