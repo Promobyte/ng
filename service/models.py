@@ -8,8 +8,9 @@ from django.db.models import signals
 class Service(models.Model):
     created = models.DateTimeField(default=timezone.now)
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='service', null=True, blank=True)
-    slug = models.SlugField(max_length=50, null=True, blank=True, db_index=True, allow_unicode=True)
+    image = models.ImageField(upload_to='service')
+    icon = models.ImageField(upload_to='service')
+    slug = models.SlugField(max_length=50, null=True, blank=True, db_index=True, allow_unicode=True, unique=True)
 
 
     def get_absolute_url(self):

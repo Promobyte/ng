@@ -19,7 +19,7 @@ STATIC_ROOT = base_dir_join('staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = base_dir_join('mediafiles')
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'

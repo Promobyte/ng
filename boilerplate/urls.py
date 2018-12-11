@@ -8,6 +8,7 @@ from service.views import ServiceDetail
 from django.utils import translation
 from service.views import IndexView
 from service.provider.views import ProviderDetail
+from django.conf.urls.static import  static
 
 
 
@@ -23,6 +24,7 @@ urlpatterns = [
 
 ]
 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
