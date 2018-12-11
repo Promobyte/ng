@@ -3,17 +3,19 @@ from django.views.generic import ListView
 from service.models import Service
 from django.views.generic.detail import DetailView
 from django.utils import timezone
-
+from django.http import HttpRequest
+from django.http import HttpResponse
 class ServiceList(ListView):
-    context_object_name = 'title'
-    queryset = Service.objects.all()
+    model = Service
 
 class ServiceDetail(DetailView):
 
     model = Service
     queryset = model.objects.all()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        return context
+
+class IndexView(ListView):
+    template_name = 'index.html'
+    model = Service
+
+

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'common',
     'users',
     'service',
+    'service.provider',
 ]
 
 MIDDLEWARE = [
@@ -66,6 +67,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'service.templatetags.service_tags',
+        ]
         },
     },
 ]

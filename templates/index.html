@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block body %}
+  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row col-md-12">
+
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+        <div class="row">
+          {% for service in object_list %}
+
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+
+              <div class="box-part text-center">
+
+                <i class="fab fa-instagram fa-3x" aria-hidden="true"></i>
+
+                <div class="title">
+                  <h4>{{ service.title }}</h4>
+                </div>
+
+                <div class="text">
+                  <span>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam. Assum decore te sed. Elitr scripta ocurreret qui ad.</span>
+                </div>
+
+                <a href="{{ request.build_absolute_uri }}{{ service.get_absolute_url }}">Learn More</a>
+
+              </div>
+            </div>
+
+
+
+          {% empty %}
+            <li>Ingen tjenester funnet</li>
+          {% endfor %}
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+
+{% endblock %}

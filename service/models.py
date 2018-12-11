@@ -11,9 +11,9 @@ class Service(models.Model):
     image = models.ImageField(upload_to='service', null=True, blank=True)
     slug = models.SlugField(max_length=50, null=True, blank=True, db_index=True, allow_unicode=True)
 
-    @property
+
     def get_absolute_url(self):
-        url = "/%s/" % self.slug
+        url = "%s/" % self.slug
         return url
 
     def __str__(self):
@@ -23,3 +23,9 @@ class Service(models.Model):
         self.slug = text.slugify(self.title, allow_unicode=True)
         super(Service, self).save(*args, **kwargs)
 
+
+def get_queryset(self):
+    return Service.objects.filter(
+        #order__order_reference=self.kwargs['service'],
+        access_key=self.kwargs['slug:service'],
+    )
