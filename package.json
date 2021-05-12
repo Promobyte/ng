@@ -21,7 +21,7 @@
     "babel-loader": "^8.0.0",
     "bootstrap": "^4.0.0",
     "bootstrap-loader": "^3.0.2",
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "classnames": "^2.2.5",
     "expose-loader": "^0.7.3",
     "feather-icons": "^4.9.0",
