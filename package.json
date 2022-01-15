@@ -27,7 +27,7 @@
     "feather-icons": "^4.9.0",
     "jquery": "^3.3.1",
     "lodash": "^4.17.4",
-    "marked": "^0.5.1",
+    "marked": "^4.0.10",
     "popper.js": "^1.14.6",
     "postcss": "^7.0.3",
     "precss": "^4.0.0",
